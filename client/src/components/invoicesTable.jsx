@@ -11,7 +11,7 @@ export default function InvoicesTable({ apiEndpoint = "/api/files/my-invoices", 
   const [loadingInvoices, setLoadingInvoices] = useState(true);
   const [editIndex, setEditIndex] = useState(null);
 
-  const BASE_URL = "http://localhost:5000";
+  const BASE_URL = "https://poc-live.onrender.com";
 
   // 🔄 Fetch Invoices
   const fetchInvoices = useCallback(async () => {
