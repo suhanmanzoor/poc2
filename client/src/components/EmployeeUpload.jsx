@@ -94,7 +94,7 @@ export default function EmployeeUpload() {
       setUploadMessage("Uploading file...");
       setErrorMessage("");
 
-      const res = await axios.post("http://localhost:5000/api/files/upload", formData, {
+      const res = await axios.post("https://poc-live.onrender.com/api/files/upload", formData, {
         withCredentials: true,
         headers: { "Content-Type": "multipart/form-data" },
       });
@@ -129,7 +129,7 @@ export default function EmployeeUpload() {
       const mergedData = mergeFlatToRaw(rawParsedData, parsedData);
 
       const res = await axios.post(
-        "http://localhost:5000/api/files/save-invoice",
+        "https://poc-live.onrender.com/api/files/save-invoice",
         { parsedData: mergedData, imagePath, uploadedByName },
         { withCredentials: true }
       );
@@ -150,7 +150,7 @@ export default function EmployeeUpload() {
   // ---------------- Export Invoices ----------------
   const handleExportInvoices = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/my-invoices/export", {
+      const res = await axios.get("https://poc-live.onrender.com/api/my-invoices/export", {
         responseType: "blob",
         withCredentials: true,
       });
