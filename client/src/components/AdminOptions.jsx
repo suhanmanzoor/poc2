@@ -1,6 +1,3 @@
-
-
-
 import { useState, useEffect, useRef } from "react";
 import {
   UserPlus, Upload, AlertCircle, User, Mail, Phone, FileText,
@@ -145,7 +142,7 @@ export default function AdminOptions({
 
   const fetchUserInvoices = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/files/all-invoices", { withCredentials: true });
+      const res = await axios.get("https://poc-live.onrender.com/api/files/all-invoices", { withCredentials: true });
       if (res.data.success) {
         const invoices = res.data.invoices.map(inv => ({
           ...inv,
