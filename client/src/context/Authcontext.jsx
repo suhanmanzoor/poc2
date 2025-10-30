@@ -182,7 +182,7 @@ export const AuthProvider = ({ children }) => {
   // Fetch current user from backend using cookie
   const fetchUser = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/auth/dashboard", {
+      const res = await axios.get("https://test-poc-0ky7.onrender.com/api/auth/dashboard", {
         withCredentials: true, // ✅ send cookie
       });
 
