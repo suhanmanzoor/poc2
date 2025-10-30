@@ -210,7 +210,7 @@ export const AuthProvider = ({ children }) => {
 
   const logoutUser = async () => {
     try {
-      await axios.post("http://localhost:5000/api/auth/logout", {}, { withCredentials: true });
+      await axios.post("https://poc-live.onrender.com/api/auth/logout", {}, { withCredentials: true });
     } catch (err) {
       console.error("Logout failed:", err);
     }
